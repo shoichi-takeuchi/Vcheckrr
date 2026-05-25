@@ -1,0 +1,97 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-05-25",
+  "description": "フィッシングメール検知キーワードルール",
+
+  "subject_keywords": {
+    "critical": [
+      "アカウント停止", "アカウント凍結", "アカウントが停止",
+      "緊急のお知らせ", "緊急確認", "至急ご確認",
+      "不正アクセス", "不正利用", "不審なログイン",
+      "セキュリティアラート", "セキュリティ警告",
+      "本人確認が必要", "本人確認のお願い",
+      "パスワードの有効期限", "パスワードリセット",
+      "カード情報の確認", "クレジットカード情報",
+      "口座凍結", "振込確認", "送金依頼",
+      "当選", "懸賞", "プレゼント当選",
+      "荷物をお届け", "配送できません", "再配達",
+      "支払い失敗", "支払いが確認できません", "決済エラー",
+      "利用停止", "サービス停止のお知らせ"
+    ],
+    "warning": [
+      "確認が必要", "ご確認ください", "更新が必要",
+      "期限切れ", "有効期限", "登録情報の確認",
+      "セキュリティ強化", "認証", "二段階認証",
+      "重要なお知らせ", "大切なお知らせ",
+      "ポイント失効", "特典", "キャンペーン"
+    ]
+  },
+
+  "body_keywords": {
+    "critical": [
+      "パスワードを入力", "クレジットカード番号", "カード番号",
+      "暗証番号", "セキュリティコード", "CVV",
+      "口座番号", "銀行口座", "振込先",
+      "マイナンバー", "個人番号",
+      "以下のリンクをクリック", "下記URLにアクセス",
+      "ログイン情報を入力", "ユーザーIDとパスワード",
+      "48時間以内", "24時間以内", "本日中に",
+      "アカウントが永久に停止", "サービスへのアクセスを停止"
+    ],
+    "warning": [
+      "ご本人様確認", "本人確認のため", "情報更新のお願い",
+      "セキュリティのため", "安全のため",
+      "下記フォームに", "以下のフォーム",
+      "クリックしてください", "アクセスしてください",
+      "期限内にご対応", "早急にご対応"
+    ]
+  },
+
+  "suspicious_patterns": {
+    "urgency_phrases": [
+      "今すぐ", "直ちに", "急いで", "緊急",
+      "最後のチャンス", "本日限り", "期限が迫",
+      "urgent", "immediately", "action required", "act now",
+      "expires soon", "last chance"
+    ],
+    "reward_phrases": [
+      "おめでとうございます", "当選しました", "選ばれました",
+      "無料プレゼント", "ギフト券", "Amazonギフト",
+      "PayPayポイント", "楽天ポイント",
+      "congratulations", "you have won", "claim your prize",
+      "free gift", "gift card"
+    ]
+  },
+
+  "subject_keywords_en": {
+    "critical": [
+      "account suspended", "account locked", "account compromised",
+      "verify your account", "confirm your identity",
+      "unusual sign-in", "suspicious activity",
+      "your password has expired", "reset your password",
+      "payment failed", "billing issue", "invoice overdue",
+      "security alert", "security warning",
+      "your package could not be delivered"
+    ],
+    "warning": [
+      "important update", "action required",
+      "confirm your email", "update your information",
+      "limited time offer", "exclusive offer"
+    ]
+  },
+
+  "body_keywords_en": {
+    "critical": [
+      "enter your password", "enter your credit card",
+      "social security number", "ssn",
+      "click the link below", "click here to verify",
+      "your account will be terminated", "permanent suspension",
+      "within 24 hours", "within 48 hours"
+    ],
+    "warning": [
+      "verify your identity", "update your details",
+      "fill out the form below", "click to confirm",
+      "respond immediately"
+    ]
+  }
+}

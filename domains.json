@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-05-25",
+  "description": "フィッシング検知ドメインルール",
+
+  "legitimate_domains": [
+    "amazon.co.jp", "amazon.com",
+    "rakuten.co.jp", "rakuten.com",
+    "yahoo.co.jp", "yahoo.com",
+    "google.com", "google.co.jp",
+    "apple.com",
+    "microsoft.com",
+    "docomo.ne.jp", "softbank.jp", "au.com",
+    "ntt.com", "nttdocomo.co.jp",
+    "smbc.co.jp", "mizuhobank.co.jp", "bk.mufg.jp",
+    "sony.co.jp",
+    "nintendo.co.jp",
+    "paypal.com",
+    "paypay.ne.jp",
+    "line.me",
+    "twitter.com", "x.com",
+    "facebook.com",
+    "instagram.com",
+    "mercari.com",
+    "sagawa.jp", "kuronekoyamato.co.jp",
+    "japanpost.jp",
+    "jal.co.jp", "ana.co.jp",
+    "aeon.co.jp", "ufj.co.jp",
+    "zengin.or.jp"
+  ],
+
+  "known_phishing_patterns": [
+    "amazon-co-jp", "arnazon", "anazon", "arnaz0n", "amaz0n", "amazom",
+    "rakuten-co-jp", "rakuteen", "r4kuten", "rakuten-login",
+    "yahoo-co-jp", "yah00", "yahoo-japan",
+    "app1e", "app-le", "aplle", "apple-id",
+    "micros0ft", "microsooft", "microsoft-login",
+    "paypa1", "paypa-l", "paypal-login",
+    "paypay-ne-jp", "pay-pay",
+    "docomo-ne-jp", "d0como", "nttdocomo-",
+    "smbc-co-jp", "sm-bc", "smbc-login",
+    "mufg-co-jp", "muufg", "mufg-bank",
+    "mizuho-co-jp", "mizuh0",
+    "mercari-", "mercal1",
+    "sagawa-", "kuroneko-",
+    "japanpost-", "post-jp",
+    "jal-", "ana-",
+    "line-login", "lin3"
+  ],
+
+  "suspicious_tlds": [
+    ".xyz", ".top", ".club", ".site", ".online",
+    ".info", ".biz", ".tk", ".ml", ".ga", ".cf",
+    ".work", ".link", ".click", ".download",
+    ".review", ".racing", ".loan", ".accountant",
+    ".stream", ".gq", ".win", ".bid", ".trade"
+  ],
+
+  "free_hosting_services": [
+    "blogspot.com", "wordpress.com", "wix.com",
+    "weebly.com", "jimdo.com", "webnode.com",
+    "000webhost.com", "freehostingnoads.net",
+    "byethost.com", "atwebpages.com"
+  ],
+
+  "url_shorteners": [
+    "bit.ly", "tinyurl.com", "t.co", "goo.gl",
+    "ow.ly", "buff.ly", "ift.tt", "dlvr.it",
+    "short.url", "rb.gy", "cutt.ly", "short.io",
+    "is.gd", "su.pr", "soo.gd", "s2r.co"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-05-25",
+  "description": "URLパターン・送信者パターン検知ルール",
+
+  "url_patterns": {
+    "suspicious_regex": [
+      "https?://[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}",
+      "https?://.*@.*",
+      "https?://[^/]*[0-9]{5,}[^/]*/",
+      "https?://[^.]+\\.[^.]+\\.[^.]+\\.[^.]+\\.[^.]+/",
+      "https?://.*-{3,}.*",
+      "https?://.*\\.php\\?.*",
+      "https?://.*login.*\\.(xyz|top|club|site|online|tk|ml)",
+      "https?://.*account.*\\.(xyz|top|club|site|online|tk|ml)",
+      "https?://.*secure.*\\.(xyz|top|club|site|online|tk|ml)",
+      "https?://.*verify.*\\.(xyz|top|club|site|online|tk|ml)",
+      "https?://.*update.*\\.(xyz|top|club|site|online|tk|ml)"
+    ],
+    "suspicious_paths": [
+      "/login", "/signin", "/account", "/verify",
+      "/update", "/confirm", "/secure", "/auth",
+      "/wp-login", "/admin", "/password"
+    ]
+  },
+
+  "sender_patterns": {
+    "suspicious_regex": [
+      ".*@.*\\.xyz$",
+      ".*@.*\\.top$",
+      ".*@.*\\.club$",
+      ".*@.*\\.tk$",
+      ".*@.*\\.ml$",
+      ".*@.*\\.gq$",
+      ".*@.*\\.cf$",
+      ".*@.*\\.ga$",
+      ".*@[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+",
+      "noreply@(?!.*\\.(?:amazon|rakuten|yahoo|google|apple|microsoft)\\.)",
+      "support@(?!.*\\.(?:amazon|rakuten|yahoo|google|apple|microsoft)\\.)",
+      "info@(?!.*\\.(?:amazon|rakuten|yahoo|google|apple|microsoft)\\.)"
+    ],
+    "display_name_mismatch_check": true,
+    "known_spoofed_display_names": [
+      "Amazon", "Amazon.co.jp", "楽天", "Rakuten",
+      "Yahoo", "Yahoo! JAPAN", "Google",
+      "Apple", "Microsoft", "PayPay",
+      "ドコモ", "NTTドコモ", "ソフトバンク", "au",
+      "三井住友銀行", "みずほ銀行", "三菱UFJ銀行",
+      "ゆうちょ銀行", "Japan Post", "日本郵便",
+      "クロネコヤマト", "ヤマト運輸", "佐川急便",
+      "LINE", "メルカリ", "PayPal"
+    ]
+  },
+
+  "html_patterns": {
+    "suspicious_form_actions": [
+      "action=\"http://",
+      "action='http://",
+      "method=\"post\""
+    ],
+    "hidden_text_indicators": [
+      "font-size:0", "font-size: 0",
+      "color:#ffffff", "color: #ffffff",
+      "display:none", "display: none",
+      "visibility:hidden", "visibility: hidden"
+    ]
+  },
+
+  "scoring": {
+    "critical_keyword_score": 30,
+    "warning_keyword_score": 10,
+    "suspicious_url_score": 25,
+    "url_shortener_score": 15,
+    "suspicious_sender_score": 20,
+    "display_name_mismatch_score": 35,
+    "suspicious_tld_score": 20,
+    "urgency_phrase_score": 10,
+    "reward_phrase_score": 15,
+    "ip_address_url_score": 40,
+    "phishing_domain_pattern_score": 45,
+    "reply_to_mismatch_score": 25,
+    "spf_fail_score": 20,
+    "dkim_fail_score": 20,
+    "dmarc_fail_score": 25,
+    "threshold_warning": 30,
+    "threshold_danger": 60,
+    "max_score": 200
+  }
+}
