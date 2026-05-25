@@ -1,0 +1,14 @@
+# 秀丸メール フィッシング検知システム 依存パッケージ
+# インストール: pip install -r requirements.txt
+
+# ファイル監視（常駐監視用）
+watchdog>=3.0.0
+
+# Windows トースト通知（優先）
+winotify>=1.1.0
+
+# Windows トースト通知（フォールバック）
+win10toast>=0.9
+
+# 文字コード自動検出
+chardet>=5.0.0
